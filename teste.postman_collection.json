@@ -1,0 +1,271 @@
+{
+	"info": {
+		"_postman_id": "c31ddbd6-436b-453f-96bd-ad0cded14986",
+		"name": "teste",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "universidades",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/universidade",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"universidade"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "universidade by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/universidade/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"universidade",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "universidade",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\":\"Nova universidade\",\r\n    \"cnpj\":\"123456\",\r\n    \"endereco\":\"foz do iguacu\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/universidade",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"universidade"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "universidade",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/universidade/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"universidade",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cursos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/universidade/1/curso",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"universidade",
+						"1",
+						"curso"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "curso",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\":\"Engenharia civil\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/universidade/1/curso",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"universidade",
+						"1",
+						"curso"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "curso",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/universidade/3/curso/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"universidade",
+						"3",
+						"curso",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "conta",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/universidade/1/curso/1/conta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"universidade",
+						"1",
+						"curso",
+						"1",
+						"conta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "conta",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"account_number\":205050\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/universidade/1/curso/2/conta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"universidade",
+						"1",
+						"curso",
+						"2",
+						"conta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "conta",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"saldo\":-500\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/universidade/deposito/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"universidade",
+						"deposito",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
